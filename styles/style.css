@@ -1,0 +1,109 @@
+/* universal styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 3px;
+  border: 1px solid LightSteelBlue;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  background-color: #fefefe;
+}
+
+/* layouts */
+
+section, footer {
+  padding: 10vh 10vw;
+}
+.box-on-top {
+
+}
+.flip-vertical {
+
+}
+
+/* typography */
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Catamaran', sans-serif;
+}
+blockquote {
+  font-family: 'Roboto', sans-serif;
+}
+.footer {
+  font-family: 'Roboto', sans-serif;
+}
+.price {
+  font-family: 'Catamaran', sans-serif;
+}
+.text-white {
+  color: white;
+}
+.text-bigger {
+
+}
+.text-smaller {
+
+}
+
+/* buttons */
+
+button {
+  font-family: 'Roboto Slab', serif;
+}
+.button-main {
+  background-color: white;
+  border: 5px solid #ff794d;
+}
+.button-main:hover {
+
+}
+.button-big {
+
+}
+.button-dark {
+
+}
+.button-dark:hover {
+
+}
+.button-arrow-left {
+
+}
+.button-arrow-left:hover {
+
+}
+.button-arrow-right {
+
+}
+.button-arrow-right:hover {
+
+}
+.button-arrow-down {
+
+}
+.button-arrow-down:hover {
+
+}
+/* this should change with javascript since button style will depend on toggle state */
+.button-toggle {
+
+}
+
+/* helper classes */
+
+.bg-white {
+  background-color: white;
+}
+.bg-dark {
+ background-color: #1e2330;
+}
+.bg-bright {
+  background-color: #ff794d;
+}
