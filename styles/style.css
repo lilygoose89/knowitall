@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid LightSteelBlue;
 }
 img {
   max-width: 100%;
@@ -15,6 +14,10 @@ body {
 
 /* layouts */
 
+nav {
+  padding: 2vh 5vw;
+  position: sticky;
+}
 section, footer {
   padding: 10vh 10vw;
 }
@@ -126,11 +129,12 @@ button {
 .button-main {
   background-color: white;
   border: 5px solid #ff794d;
+  min-width: 80px;
+  padding: 10px 5px;
+  box-shadow: 0.5px 5px 10px rgba(0,0,0,0.05);
 }
 .button-main:hover {
-
-}
-.button-big {
+  padding: 20px 20px;
 
 }
 .button-dark {
@@ -150,10 +154,15 @@ button {
 
 .bg-white {
   background-color: white;
+  padding: 2%;
+  box-shadow: 0.5px 5px 20px rgba(0,0,0,0.13);
 }
 .bg-dark {
  background-color: #1e2330;
+ padding: 2%;
+ box-shadow: 0.5px 5px 20px rgba(0,0,0,0.13);
 }
 .bg-bright {
   background-color: #ff794d;
+  box-shadow: 0.5px 5px 20px rgba(0,0,0,0.13);
 }

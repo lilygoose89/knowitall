@@ -27,14 +27,18 @@
     <section class="hero">
       <!-- the conatiner below contains my hero elements and will be used again but flipped in the testimonials section -->
       <div class="grid-middle box-on-top">
-        <!-- this is the container for my white box -->
-        <div class="col-7_sm-12 bg-white">
-          <h1>Helping startup teams scale to success.</h1>
-          <h6>Happy teams have the know-how and resources to stay on the same page and work in sync.</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div>
-            <a href="blog.html"><button class="button-main">learn for free</button></a>
-            <a href="services.html"><button class="button-main">hire me</button></a>
+        <!-- this is the contianer for the white box and buttons -->
+        <div class="col-7_sm-12 grid">
+          <!-- this is the container for my white box -->
+          <div class="bg-white">
+            <h1>Helping startup teams scale to success.</h1>
+            <h6>Happy teams have the know-how and resources to stay on the same page and work in sync.</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!-- these are the buttons which are meant to midline at the bottom of the container above -->
+            <div>
+              <a href="blog.html"><button class="button-main">learn for free</button></a>
+              <a href="services.html"><button class="button-main">hire me</button></a>
+            </div>
           </div>
         </div>
         <!-- this is the container for my hero image which will overlap so it sits beside and underneath the container for testimonials -->
@@ -148,7 +152,7 @@
               <label class="col-12" for="message">Message</label>
               <textarea name="message" id="message" placeholder=" Your message"></textarea>
             </div>
-            <button type="submit" required="true" class="button-main button-big">send</button>
+            <button type="submit" required="true" class="button-main">send</button>
           </form>
           <!-- this is the second form which will appear when the user toggles the button -->
           <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
