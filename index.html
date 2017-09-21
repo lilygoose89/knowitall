@@ -11,12 +11,12 @@
   </head>
   <body>
     <!-- this is my header and nav which will be reused in jekyll -->
-    <header><div></div>
+    <header>
       <nav class="grid-spaceBetween-middle bg-white">
-        <div class="col-2">
+        <div class="col-2_sm-12">
           <img src"" alt="knowitall logo">
         </div>
-        <div class="col-2">
+        <div class="col-4_sm-12">
           <a href="services.html">services</a>
           <a href="blog.html">blog</a>
           <a href="index.html/#contact">contact</a>
@@ -28,7 +28,7 @@
       <!-- the conatiner below contains my hero elements and will be used again but flipped in the testimonials section -->
       <div class="grid-middle box-on-top">
         <!-- this is the container for my white box -->
-        <div class="col-6 bg-white">
+        <div class="col-6_sm-12 bg-white">
           <h1>Helping startup teams scale to success.</h1>
           <h6>Happy teams have the know-how and resources to stay on the same page and work in sync.</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -38,7 +38,7 @@
           </div>
         </div>
         <!-- this is the container for my hero image -->
-        <div class="col-6">
+        <div class="col-6_sm-12">
           <img src="" alt="lily bruns hero image">
         </div>
       </div>
@@ -56,7 +56,7 @@
       <!-- this is the container for the blog previews -->
       <div class="grid">
         <!-- this is a blog preview which will be repeated with jekyll -->
-        <div class="col-4 bg-white">
+        <div class="col-4_sm-12 bg-white">
           <img src="" alt="blog post image">
           <div>
           <h4>Blog post title which will probably be quite long like this.</h4>
@@ -84,7 +84,7 @@
       <!-- this is the container for the case study previews -->
       <div class="grid">
         <!-- this is a case study preview which will be recreated in jekyll -->
-        <div class="col-4 bg-white">
+        <div class="col-4_sm-12 bg-white">
           <img src="" alt="case study image">
           <div>
           <h4>Title of case study with awesome client.</h4>
@@ -98,7 +98,7 @@
     <section class="testimonials">
       <!-- the container below uses the same class as the hero but will be flipped  -->
       <div class="grid-middle box-on-top flip-vertical">
-        <div class="col-5 bg-white">
+        <div class="col-5_sm-12 bg-white">
           <div>
             <h2>Why work with me?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -120,7 +120,7 @@
             </div>
           </div>
         </div>
-        <div class="col-5"><!--needs a class-->
+        <div class="col-5_sm-12"><!--needs a class-->
           <img src="" alt="image to go with testimonial">
         </div>
       </div>
@@ -135,40 +135,40 @@
           <a href="#"><button class="button-main button-toggle">kickstart your project</button></a>
           <!-- this is the first form which will appear by default -->
           <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
-            <div class="col-12">
-              <label for="name">Name</label>
+            <div class="col-12 grid">
+              <label class="col-12" for="name">Name</label>
               <input type="text" required="true" name="name" id="name" placeholder=" Harry">
             </div>
-            <div class="col-12">
-              <label for="email">Email</label>
+            <div class="col-12 grid">
+              <label class="col-12" for="email">Email</label>
               <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
             </div>
-            <div class="col-12">
-              <label for="message">Message</label>
+            <div class="col-12 grid">
+              <label class="col-12" for="message">Message</label>
               <textarea name="message" id="message" placeholder=" Your message"></textarea>
             </div>
             <button type="submit" required="true" class="button-main button-big">send</button>
           </form>
           <!-- this is the second form which will appear when the user toggles the button -->
-          <form class="grid" method="POST" action="http://formspree.io/busababruns@gmail.com">
-            <div class="col-6">
-              <label for="name">First Name</label>
+          <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
+            <div class="col-6_sm-12 grid">
+              <label class="col-12" for="name">First Name</label>
               <input type="text" required="true" name="firstname" id="name" placeholder=" Harry">
             </div>
-            <div class="col-6">
-              <label for="name">Last Name</label>
+            <div class="col-6_sm-12 grid">
+              <label class="col-12" for="name">Last Name</label>
               <input type="text" required="true" name="lastname" id="name" placeholder=" Potter">
             </div>
-            <div class="col-12">
-              <label for="email">Email</label>
+            <div class="col-12 grid">
+              <label class="col-12" for="email">Email</label>
               <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
             </div>
-            <div class="col-12">
+            <div class="col-12 grid">
               <label for="name">Company</label>
               <input type="text" required="true" name="company" id="name" placeholder=" Ministry of Magic">
             </div>
-            <div class="col-12">
-              <label for="project">What project(s) are you interested in?</label>
+            <div class="col-12 grid">
+              <label class="col-12" for="project">What project(s) are you interested in?</label>
               <!-- these are the checkbox options -->
               <input type="checkbox" name="project" value="project1" />Project 1
               <input type="checkbox" name="project" value="project2" />Project 2
@@ -176,9 +176,9 @@
               <input type="checkbox" name="project" value="multi" />Several of the above projects, I *need* help
               <input type="checkbox" name="project" value="notsure" />How many people are on your team?
             </div>
-            <div class="col-12">
-              <label for="companysize">How many people are on your team?</label>
-              <select name="teamsize">
+            <div class="col-12 grid">
+              <label class="col-12" for="companysize">How many people are on your team?</label>
+              <select class="col-12" name="teamsize">
                 <option value="tiny">Less than 5 people</option>
                 <option value="small">5-10 people</option>
                 <option value="medium">11-20 people</option>
@@ -186,13 +186,13 @@
                 <option value="toobig">More than 50 people</option>
               </select>
             </div>
-            <div class="col-12">
-              <label for="whykm">Why do you need knowledge management?</label>
-              <textarea name="message" required="true" id="whykm" placeholder=" Because I'm the only one who can answer my team's questions and its driving me bananas."></textarea>
+            <div class="col-12 grid">
+              <label class="col-12" for="whykm">Why do you need knowledge management?</label>
+              <textarea class="col-12" name="message" required="true" id="whykm" placeholder=" Because I'm the only one who can answer my team's questions and its driving me bananas."></textarea>
             </div>
-            <div class="col-12">
-              <label for="message">What else would you like to tell me?</label>
-              <textarea name="message" id="message" placeholder=" Your message"></textarea>
+            <div class="col-12 grid">
+              <label class="col-12" for="message">What else would you like to tell me?</label>
+              <textarea class="col-12" name="message" id="message" placeholder=" Your message"></textarea>
             </div>
             <button type="submit" class="button-main button-big">send project request</button>
           </form>
@@ -201,16 +201,16 @@
     <!-- this is my footer section which will be reused in jekyll -->
     <footer class="footer">
       <div class="grid-middle">
-        <div class="col-3">
+        <div class="col-3_sm-12">
           <img src="images/lilybruns-headshot.jpeg" alt="lily bruns headshot">
         </div>
-        <div class="col-5">
+        <div class="col-5_sm-12">
           <h6>Lily Bruns is a blabbity blah blah blah.</p>
           <p>Just one conversation can be all you need to clarify your vision and get the direction you need to make your next step. Don't be shy, <a href="">get in touch and let’s do awesome things together!</a></p>
         </div>
-        <div class="col-4">
+        <div class="col-4_sm-12">
           <h6>EMAIL: <a href="mailto:theboss@knowitall.solutions">theboss@knowitall.solutions</a></h6>
-          <h6>PHONE: <a href="tel:+1xxxxxxxxxx">+1 xxx-xxx-xxxx</h6>
+          <h6>PHONE: <a href="tel:+1-xxx-xxx-xxxx">+1 xxx-xxx-xxxx</a></h6>
           <div class="grid-spaceAround">
             <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -218,15 +218,15 @@
             <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div>
+        <div class="col-12">
           <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright Lily Bruns 2017</p>
         </div>
       </div>
       <!-- this is the sign-up form -->
       <div class="grid">
-        <div class="col-4">
+        <div class="col-4_sm-12">
           <h4>Sign up for updates <i class="fa fa-arrow-right" aria-hidden="true"></i></h4>
-        </div class="col-8">
+        </div class="col-8_sm-12">
         <!-- embed sign-up form below -->
         <div>
         </div>

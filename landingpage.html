@@ -13,35 +13,44 @@
     <!-- this is my landing page header and simplified nav which will be reused in jekyll -->
     <header>
       <nav class="grid-spaceBetween-middle bg-white">
-        <div>
+        <div class="col-2_sm-12">
           <img src"" alt="knowitall logo">
         </div>
-        <div>
+        <div class="col-1_sm-12">
           <a href="#contact">contact</a>
         </div>
       </nav>
+    </header>
     <section>
       <h1>Title of case study with awesome client</h1>
-      <div>
-        <div class="bg-white">
-          <p>This is a tagline</p>
-          <ul>
-            <li>this is a descriptive bullet point</li>
-            <li>people love bullet points</li>
-            <li>give the people all the bullet points</li></ul>
-          <p>What are you waiting for? Buy the things.</p>
+      <div class="grid">
+        <div class="col-6_sm-12 bg-white">
+          <p>This is a tagline
+            <ul>
+              <li>this is a descriptive bullet point</li>
+              <li>people love bullet points</li>
+              <li>give the people all the bullet points</li></ul>
+            What are you waiting for? Buy the things.</p>
         </div>
-        <div class="bg-bright">
-          <form method="POST" action="http://formspree.io/busababruns@gmail.com">
-            <label for="name">First Name</label>
-            <input type="text" name="firstname" id="name" placeholder=" Harry">
-            <label for="name">Last Name</label>
-            <input type="text" name="lastname" id="name" placeholder=" Potter">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder=" harry@wizards.com">
-            <a href=""><button type="submit" class="button-main button-dark ">get the pdf</button></a>
+        <div class="col-6_sm-12 bg-bright">
+          <h5>download the case study</h5>
+          <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
+            <div class="col-6_sm-12 grid">
+              <label class="col-12" for="name">First Name</label>
+              <input type="text" name="firstname" id="name" placeholder=" Harry">
+            </div>
+            <div class="col-6_sm-12 grid">
+              <label class="col-12" for="name">Last Name</label>
+              <input type="text" name="lastname" id="name" placeholder=" Potter">
+            </div>
+            <div class="col-12 grid">
+              <label class="col-12" for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder=" harry@wizards.com">
+            </div>
+            <a href=""><button type="submit" class="button-dark">get the pdf</button></a>
           </form>
         </div>
       </div>
+    </section>
 
   </body>

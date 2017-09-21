@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 3px;
+  padding: 0;
   border: 1px solid LightSteelBlue;
 }
 img {
@@ -68,7 +68,9 @@ button {
 
 }
 .button-dark {
-
+  background-color: #1e2330;
+  border: 5px solid #1e2330;
+  color: white;
 }
 .button-dark:hover {
 
