@@ -4,7 +4,7 @@
     <!-- these are style links which will be reused in jekyll -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran|Roboto|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Roboto|Roboto+Slab:300,400" rel="stylesheet">
     <script src="https://use.fontawesome.com/97eb518d07.js"></script>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -28,7 +28,7 @@
       <!-- the conatiner below contains my hero elements and will be used again but flipped in the testimonials section -->
       <div class="grid-middle box-on-top">
         <!-- this is the container for my white box -->
-        <div class="col-6_sm-12 bg-white">
+        <div class="col-7_sm-12 bg-white">
           <h1>Helping startup teams scale to success.</h1>
           <h6>Happy teams have the know-how and resources to stay on the same page and work in sync.</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -37,8 +37,8 @@
             <a href="services.html"><button class="button-main">hire me</button></a>
           </div>
         </div>
-        <!-- this is the container for my hero image -->
-        <div class="col-6_sm-12">
+        <!-- this is the container for my hero image which will overlap so it sits beside and underneath the container for testimonials -->
+        <div class="col-7_sm-12">
           <img src="" alt="lily bruns hero image">
         </div>
       </div>
@@ -98,16 +98,16 @@
     <section class="testimonials">
       <!-- the container below uses the same class as the hero but will be flipped  -->
       <div class="grid-middle box-on-top flip-vertical">
-        <div class="col-5_sm-12 bg-white">
+        <div class="col-7_sm-12 bg-white">
           <div>
-            <h2>Why work with me?</h2>
+            <h2 class="text-medium">Why work with me?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
           <!-- this is the container for the testimonials which should cycle through like a gallery-->
           <div class="grid-middle">
             <div class="col-1">
               <!-- this is the button or icon to click left to see previous testimonial -->
-            <a href="#"><button class="button-arrow-left"></button></a>
+            <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></button></a>
             </div>
             <div class="col-8">
               <!-- this is the testimonial itself -->
@@ -116,11 +116,12 @@
             </div>
             <div class="col-1">
               <!-- this is the button or icon to click right to see next testimonial -->
-              <a href="#"><button class="button-arrow-right"></button></a>
+              <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
-        <div class="col-5_sm-12"><!--needs a class-->
+        <!-- this will overlap so it sits beside and underneath the container for testimonials -->
+        <div class="col-7_sm-12">
           <img src="" alt="image to go with testimonial">
         </div>
       </div>
@@ -199,14 +200,14 @@
       </div>
     </section>
     <!-- this is my footer section which will be reused in jekyll -->
-    <footer class="footer">
+    <footer>
       <div class="grid-middle">
         <div class="col-3_sm-12">
           <img src="images/lilybruns-headshot.jpeg" alt="lily bruns headshot">
         </div>
         <div class="col-5_sm-12">
-          <h6>Lily Bruns is a blabbity blah blah blah.</p>
-          <p>Just one conversation can be all you need to clarify your vision and get the direction you need to make your next step. Don't be shy, <a href="">get in touch and let’s do awesome things together!</a></p>
+          <h6 class="footer-text">Lily Bruns is a blabbity blah blah blah.</h6>
+          <p class="footer-text">Just one conversation can be all you need to clarify your vision and get the direction you need to make your next step. Don't be shy, <a href="" class="footer-text">get in touch and let’s do great things together!</a></p>
         </div>
         <div class="col-4_sm-12">
           <h6>EMAIL: <a href="mailto:theboss@knowitall.solutions">theboss@knowitall.solutions</a></h6>
@@ -219,7 +220,7 @@
           </div>
         </div>
         <div class="col-12">
-          <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright Lily Bruns 2017</p>
+          <p class="footer-text"><i class="fa fa-copyright" aria-hidden="true"></i> Copyright Lily Bruns 2017</p>
         </div>
       </div>
       <!-- this is the sign-up form -->

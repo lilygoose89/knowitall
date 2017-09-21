@@ -29,27 +29,93 @@ section, footer {
 
 body {
   font-family: 'Roboto Slab', serif;
+  color: #1e2330;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Catamaran', sans-serif;
 }
+h1 {
+  color: #c84447;
+  font-size: 2rem;
+}
+h2 {
+  color: #c84447;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+h3 {
+  color: #c84447;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+h5 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+
+}
+h6 {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+a {
+  color: #ff794d;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff794d;
+  font-weight: 400;
+}
+i {
+  color: #ff794d;
+}
+ul,li {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
 blockquote {
   font-family: 'Roboto', sans-serif;
 }
-.footer {
+label {
+  font-family: 'Roboto Slab', serif;
+}
+input,placeholder {
   font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
 }
 .price {
   font-family: 'Catamaran', sans-serif;
+  color: grey;
+}
+.footer-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.6rem;
 }
 .text-white {
   color: white;
 }
-.text-bigger {
-
+.text-dark {
+  color: #1e2330;
 }
-.text-smaller {
-
+.text-big {
+  font-size: 2.5rem;
+}
+.text-medium {
+    font-size: 1.8rem;
+}
+.text-small {
+  font-size: 0.9rem;
 }
 
 /* buttons */
@@ -73,24 +139,6 @@ button {
   color: white;
 }
 .button-dark:hover {
-
-}
-.button-arrow-left {
-
-}
-.button-arrow-left:hover {
-
-}
-.button-arrow-right {
-
-}
-.button-arrow-right:hover {
-
-}
-.button-arrow-down {
-
-}
-.button-arrow-down:hover {
 
 }
 /* this should change with javascript since button style will depend on toggle state */
