@@ -4,7 +4,7 @@
     <!-- these are style links which will be reused in jekyll -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran|Roboto:300,400|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Roboto:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
     <script src="https://use.fontawesome.com/97eb518d07.js"></script>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -112,7 +112,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
           <!-- this is the container for the testimonials which should cycle through like a gallery-->
-          <div class="grid-middle">
+          <div class="grid-middle container-center">
             <div class="col-1">
               <!-- this is the button or icon to click left to see previous testimonial -->
             <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
@@ -138,56 +138,58 @@
     <section id="contact">
       <!-- this is the container for the contact form -->
       <div class="bg-white">
-        <h2>Get in touch</h2>
+        <h2 class="text-center">Get in touch</h2>
           <!-- this is button to toggle between the two form options (will use javascript?) -->
-          <a href="#"><button class="button-main button-toggle">send a quick message</button></a>
-          <a href="#"><button class="button-main button-toggle">kickstart your project</button></a>
+          <div class="text-center">
+            <a href="#"><button class="button-main button-toggle">send a quick message</button></a>
+            <a href="#"><button class="button-main button-toggle">kickstart your project</button></a>
+          </div>
           <!-- this is the first form which will appear by default -->
           <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
-            <div class="col-12 grid">
-              <label class="col-12" for="name">Name</label>
+            <div class="col-12">
+              <label for="name">Name</label>
               <input type="text" required="true" name="name" id="name" placeholder=" Harry">
             </div>
-            <div class="col-12 grid">
-              <label class="col-12" for="email">Email</label>
+            <div class="col-12">
+              <label for="email">Email</label>
               <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
             </div>
-            <div class="col-12 grid">
-              <label class="col-12" for="message">Message</label>
+            <div class="col-12">
+              <label for="message">Message</label>
               <textarea name="message" id="message" placeholder=" Your message"></textarea>
             </div>
             <button type="submit" required="true" class="button-main transition-ease">send</button>
           </form>
           <!-- this is the second form which will appear when the user toggles the button -->
           <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
-            <div class="col-6_sm-12 grid">
-              <label class="col-12" for="name">First Name</label>
+            <div class="col-6_sm-12">
+              <label for="name">First Name</label>
               <input type="text" required="true" name="firstname" id="name" placeholder=" Harry">
             </div>
-            <div class="col-6_sm-12 grid">
-              <label class="col-12" for="name">Last Name</label>
+            <div class="col-6_sm-12">
+              <label for="name">Last Name</label>
               <input type="text" required="true" name="lastname" id="name" placeholder=" Potter">
             </div>
-            <div class="col-12 grid">
-              <label class="col-12" for="email">Email</label>
+            <div class="col-12">
+              <label for="email">Email</label>
               <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
             </div>
-            <div class="col-12 grid">
+            <div class="col-12">
               <label for="name">Company</label>
               <input type="text" required="true" name="company" id="name" placeholder=" Ministry of Magic">
             </div>
             <div class="col-12 grid">
-              <label class="col-12" for="project">What project(s) are you interested in?</label>
-              <!-- these are the checkbox options -->
-              <input type="checkbox" name="project" value="project1" />Project 1
-              <input type="checkbox" name="project" value="project2" />Project 2
-              <input type="checkbox" name="project" value="project3" />Project 3
-              <input type="checkbox" name="project" value="multi" />Several of the above projects, I *need* help
-              <input type="checkbox" name="project" value="notsure" />How many people are on your team?
+              <label for="project">What project(s) are you interested in?</label>
+              <!-- these are the checkbox options - CAN PULL USING JEKYLL? -->
+              <input type="checkbox" name="project" value="project1"/>Project 1
+              <input type="checkbox" name="project" value="project2"/>Project 2
+              <input type="checkbox" name="project" value="project3"/>Project 3
+              <input type="checkbox" name="project" value="multi"/>Several of the above projects, I *need* help
+              <input type="checkbox" name="project" value="notsure"/>Not sure, can we chat first?
             </div>
-            <div class="col-12 grid">
-              <label class="col-12" for="companysize">How many people are on your team?</label>
-              <select class="col-12" name="teamsize">
+            <div class="col-12">
+              <label for="companysize">How many people are on your team?</label>
+              <select name="teamsize">
                 <option value="tiny">Less than 5 people</option>
                 <option value="small">5-10 people</option>
                 <option value="medium">11-20 people</option>
@@ -195,13 +197,13 @@
                 <option value="toobig">More than 50 people</option>
               </select>
             </div>
-            <div class="col-12 grid">
-              <label class="col-12" for="whykm">Why do you need knowledge management?</label>
-              <textarea class="col-12" name="message" required="true" id="whykm" placeholder=" Because I'm the only one who can answer my team's questions and its driving me bananas."></textarea>
+            <div class="col-12">
+              <label for="whykm">Why do you need knowledge management?</label>
+              <textarea name="message" required="true" id="whykm" placeholder=" Because I'm the only one who can answer my team's questions and its driving me bananas."></textarea>
             </div>
-            <div class="col-12 grid">
-              <label class="col-12" for="message">What else would you like to tell me?</label>
-              <textarea class="col-12" name="message" id="message" placeholder=" Your message"></textarea>
+            <div class="col-12">
+              <label for="message">What else would you like to tell me?</label>
+              <textarea name="message" id="message" placeholder=" Your message"></textarea>
             </div>
             <button type="submit" class="button-main button-big transition-ease">send project request</button>
           </form>
