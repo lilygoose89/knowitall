@@ -1,0 +1,268 @@
+/* universal styles ----------------------------------------- */
+* {
+  box-sizing: border-box;
+  border: 1px lightgrey solid;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  background-color: #fefefe;
+}
+/* layouts ----------------------------------------- */
+nav {
+  padding: 2vh 5vw;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+section {
+  padding: 14vh 10vw;
+}
+.box-on-top {
+
+}
+.flip-vertical {
+
+}
+/* typography ----------------------------------------- */
+body {
+  font-family: 'Roboto Slab', serif;
+  color: #1e2330;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Catamaran', sans-serif;
+  margin: 0;
+}
+h1 {
+  color: #c84447;
+  font-size: 2rem;
+}
+h2 {
+  color: #c84447;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+h3 {
+  color: #c84447;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+h5 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+h6 {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+a {
+  color: #ff794d;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff794d;
+  font-weight: 700;
+}
+i {
+  color: #ff794d;
+}
+ul,li {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+blockquote {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.price {
+  font-family: 'Catamaran', sans-serif;
+  color: grey;
+}
+.footer-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7rem;
+}
+.footer-text a:hover {
+  font-weight: bold;
+}
+.text-white {
+  color: white;
+}
+.text-dark {
+  color: #1e2330;
+}
+.text-big {
+  font-size: 2.5rem;
+}
+.text-medium {
+    font-size: 1.5rem;
+}
+.text-small {
+  font-size: 0.9rem;
+}
+/* forms -----------------------------------------  */
+label {
+  font-family: 'Roboto Slab', serif;
+  display: block;
+  padding: 0.5rem 0.2rem 0.5rem;
+}
+input,placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+input {
+  width: 90%;
+  height: 2rem;
+}
+textarea {
+  width: 90%;
+  height: 5rem;
+}
+/*.pad-form {
+  padding: 0.5rem 0.2rem 0.5rem;
+}*/
+
+/* buttons -----------------------------------------  */
+button {
+  font-family: 'Roboto Slab', serif;
+}
+.button-main {
+  background-color: white;
+  border: 5px solid #ff794d;
+  padding: 10px 5px;
+  min-width: 120px;
+  box-shadow: 0.5px 5px 10px rgba(0,0,0,0.05);
+}
+.button-main:hover {
+  /*padding: 20px 20px;*/
+  transform: scale(1.1);
+}
+.button-dark {
+  background-color: #1e2330;
+  border: 5px solid #1e2330;
+  color: white;
+  min-width: 80px;
+  padding: 10px 5px;
+}
+.button-dark:hover {
+  padding: 20px 20px;
+}
+/* this should change with javascript since button style will depend on toggle state */
+.button-toggle {
+
+}
+/* helper classes -----------------------------------------  */
+/* BACKGROUNDS */
+.bg-white {
+  background-color: white;
+  padding: 2%;
+  box-shadow: 0.5px 5px 20px rgba(0,0,0,0.13);
+}
+.bg-dark {
+ background-color: #434343;
+ padding: 2%;
+ box-shadow: 0.5px 5px 20px rgba(0,0,0,0.13);
+}
+.bg-grey {
+  background-color: #797979;
+  padding: 2%;
+}
+.bg-bright {
+  background-color: #ff794d;
+  padding: 2%;
+  box-shadow: 0.5px 5px 20px rgba(0,0,0,0.13);
+}
+
+/* ALIGNMENT */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.container-center {
+  margin: 0 auto;
+}
+
+/* PADDING/MARGINS */
+.pad-footer {
+  padding: 2vh 12vw;
+}
+.pad-all-s {
+  padding: 5%;
+}
+.pad-all-m {
+  padding: 10%;
+}
+.pad-all-l {
+  padding: 20%;
+}
+.pad-top-s {
+  padding-top: 5%;
+}
+.pad-top-m {
+  padding-top: 10%;
+}
+.pad-top-l {
+  padding-top: 20%;
+}
+.pad-right-s {
+  padding-right: 5%;
+}
+.pad-right-m {
+  padding-right: 10%;
+}
+.pad-right-l {
+  padding-right: 20%;
+}
+.pad-bottom-s {
+  padding-bottom: 5%;
+}
+.pad-bottom-m {
+  padding-bottom: 10%;
+}
+.pad-bottom-l {
+  padding-bottom: 20%;
+}
+.pad-left-s {
+  padding-left: 5%;
+}
+.pad-left-m {
+  padding-left: 5%;
+}
+.pad-left-l {
+  padding-left: 5%;
+}
+/* ANIMATIONS */
+.nudge-right {
+
+}
+.nudge-left {
+
+}
+.nudge-down {
+
+}
+.transition-ease{
+  -webkit-transition: all 367ms cubic-bezier(0.215, 1, 0.320, 0.965); /* older webkit */
+-webkit-transition: all 367ms cubic-bezier(0.215, 1.205, 0.320, 0.965);
+   -moz-transition: all 367ms cubic-bezier(0.215, 1.205, 0.320, 0.965);
+     -o-transition: all 367ms cubic-bezier(0.215, 1.205, 0.320, 0.965);
+        transition: all 367ms cubic-bezier(0.215, 1.205, 0.320, 0.965); /* custom */
+}
