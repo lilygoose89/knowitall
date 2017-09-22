@@ -121,17 +121,13 @@ input,placeholder {
   font-size: 1rem;
 }
 input {
-  width: 90%;
+  width: 100%;
   height: 2rem;
 }
 textarea {
-  width: 90%;
+  width: 100%;
   height: 5rem;
 }
-/*.pad-form {
-  padding: 0.5rem 0.2rem 0.5rem;
-}*/
-
 /* buttons -----------------------------------------  */
 button {
   font-family: 'Roboto Slab', serif;
@@ -150,12 +146,12 @@ button {
 .button-dark {
   background-color: #1e2330;
   border: 5px solid #1e2330;
-  color: white;
-  min-width: 80px;
   padding: 10px 5px;
+  min-width: 120px;
+  color: white;
 }
 .button-dark:hover {
-  padding: 20px 20px;
+  transform: scale(1.1);
 }
 /* helper classes -----------------------------------------  */
 /* BACKGROUNDS */
@@ -237,10 +233,28 @@ button {
   padding-left: 5%;
 }
 .pad-left-m {
-  padding-left: 5%;
+  padding-left: 10%;
 }
 .pad-left-l {
-  padding-left: 5%;
+  padding-left: 20%;
+}
+.margin-all-s {
+  margin: 5%
+}
+.margin-all-s {
+  margin: 10%
+}
+.margin-all-s {
+  margin-top: 20%
+}
+.margin-top-s {
+  margin-top: 5%
+}
+.margin-top-s {
+  margin-top: 10%
+}
+.margin-top-s {
+  margin-top: 20%
 }
 /* ANIMATIONS */
 /*.nudge-right {
@@ -275,4 +289,22 @@ button {
   position: absolute;
   top: 92%;
   right: 27%;
+}
+.container-float-testimonial {
+  position: absolute;
+  right: 10%;
+  left: 40%;
+  top: 416%;
+}
+.container-float-lpform {
+  position: absolute;
+  right: 10%;
+  left: 40%;
+  top: 35%;
+}
+/* media queries */
+@media all and (max-width:768px) {
+  section {
+    padding: 8vh 6vw;
+  }
 }
