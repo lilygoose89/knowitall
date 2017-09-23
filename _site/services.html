@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>knowitall solutions</title>
+    <title></title>
     <!-- these are style links which will be reused in jekyll -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
     <link href="https://fonts.googleapis.com/css?family=Catamaran|Roboto:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
@@ -16,11 +16,15 @@
         <div class="col-2_sm-12 text-center">
           <a href="/"><img src"" alt="knowitall logo"></a>
         </div>
-        <div class="col-3_sm-12 text-center">
+        <div  id="menu"class="col-3_sm-12 text-center">
           <a href="services.html">services</a>
           <a href="blog.html">blog</a>
           <a href="/#contact">contact</a>
         </div>
+        <!-- below is my hamburger menu for mobile -->
+        <a id="hamburger" href="#" title="home" class="toggle-mobile-menu">
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </a>
       </nav>
     </header>
     <!-- this is where my content goes -->
@@ -67,7 +71,7 @@
 
     <!-- this is my footer section which will be reused in jekyll -->
     <footer>
-      <div class="bg-grey grid-top pad-footer">
+      <div class="bg-grey grid pad-footer center-screen-md">
         <div class="col-3_sm-12">
           <img src="images/lilybruns-headshot.jpeg" alt="lily bruns headshot">
         </div>
@@ -92,11 +96,23 @@
       <!-- this is the sign-up form -->
       <div class="grid bg-bright pad-footer">
         <div class="col-4_sm-12">
-          <h4>Sign up for updates <i class="fa fa-arrow-right text-dark" aria-hidden="true"></i></h4>
+          <h4>Sign up for updates <i class="fa fa-arrow-right text-dark hide-screen-md" aria-hidden="true"></i></h4>
         </div class="col-8_sm-12">
         <!-- embed sign-up form below -->
         <div>
         </div>
       </div>
     </footer>
+    <!-- this is wher my javascript nonsense lives -->
+    <nav id="mobile-menu" class="grid-middle">
+      <a href="#" class="col-12 toggle-mobile-menu">
+        <i class="fa fa-times text-white" aria-hidden="true"></i>
+      </a>
+      <a href="services.html" class="text-white">services</a>
+      <a href="blog.html" class="text-white">blog</a>
+      <a href="/#contact" class="text-white">contact</a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
   </body>

@@ -276,8 +276,8 @@ button {
 /* container and button floats */
 .container-float-heroCTA {
   position: absolute;
-  right: 41%;
-  left: 14%;
+  right: 40%;
+  left: 15%;
   top: 30%;
 }
 .button-float-learnforfree {
@@ -288,7 +288,8 @@ button {
 .button-float-hireme {
   position: absolute;
   top: 92%;
-  right: 27%;
+  right: 25%;
+  margin-left: 2%;
 }
 .container-float-testimonial {
   position: absolute;
@@ -307,4 +308,67 @@ button {
   section {
     padding: 8vh 6vw;
   }
+  .container-float-heroCTA, .container-float-testimonial {
+    position: static;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+  }
+  .center-screen-md {
+    text-align: center;
+  }
+  .button-float-learnforfree, .button-float-hireme {
+    position: static;
+  }
+  .hide-screen-md {
+    display: none;
+  }
+  .text-big {
+    font-size: 1.5rem;
+  }
+  .text-medium {
+    font-size: 0.9rem;
+  }
+}
+@media all and (max-width:568px) {
+  .hide-screen-sm {
+    display: none;
+  }
+}
+/*
+**  MOBILE MENU
+*/
+#mobile-menu {
+  background-color: #ff794d;
+  text-align: center;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 9999;
+}
+#mobile-menu.mobile-menu-visible {
+  display: block;
+}
+#mobile-menu a:hover {
+  color: white;
+  font-weight: bold;
+}
+#hamburger{
+  position: absolute;
+  right: 20px;
+  display: none !important;
+}
+@media all and (max-width:768px) {
+
+  #hamburger {
+    display: block !important;
+  }
+  #menu {
+    display: none;
+  }
+
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>knowitall solutions</title>
+    <title></title>
     <!-- these are style links which will be reused in jekyll -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
     <link href="https://fonts.googleapis.com/css?family=Catamaran|Roboto:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
@@ -16,11 +16,15 @@
         <div class="col-2_sm-12 text-center">
           <a href="/"><img src"" alt="knowitall logo"></a>
         </div>
-        <div class="col-3_sm-12 text-center">
+        <div  id="menu"class="col-3_sm-12 text-center">
           <a href="services.html">services</a>
           <a href="blog.html">blog</a>
           <a href="/#contact">contact</a>
         </div>
+        <!-- below is my hamburger menu for mobile -->
+        <a id="hamburger" href="#" title="home" class="toggle-mobile-menu">
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </a>
       </nav>
     </header>
     <!-- this is where my content goes -->
@@ -29,21 +33,21 @@
       <!-- the conatiner below contains my hero elements and will be used again but flipped in the testimonials section -->
       <div class="grid-middle">
         <!-- this is the contianer for the white box and buttons -->
-        <div class="col-6_sm-12 grid">
+        <div class="col-6_sm-12">
           <!-- this is the container for my white box -->
           <div class="container-float-heroCTA bg-white">
             <h1>Helping startup teams scale to success.</h1>
             <h6>Happy teams have the know-how and resources to stay on the same page and work in sync.</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <!-- these are the buttons which are meant to midline at the bottom of the container above -->
-            <div>
+            <div class="center-screen-md">
               <a href="blog.html"><button class="button-main transition-ease button-float-learnforfree">learn for free</button></a>
               <a href="services.html"><button class="button-main transition-ease button-float-hireme">hire me</button></a>
             </div>
           </div>
         </div>
         <!-- this is the container for my hero image which will overlap so it sits beside and underneath the container for my intro -->
-        <div class="imgRight col-6_sm-12">
+        <div class="col-6_sm-12 center-screen-md">
           <img src="https://unsplash.it/500" alt="lily bruns hero image">
         </div>
       </div>
@@ -213,7 +217,7 @@
 
     <!-- this is my footer section which will be reused in jekyll -->
     <footer>
-      <div class="bg-grey grid-top pad-footer">
+      <div class="bg-grey grid pad-footer center-screen-md">
         <div class="col-3_sm-12">
           <img src="images/lilybruns-headshot.jpeg" alt="lily bruns headshot">
         </div>
@@ -238,11 +242,23 @@
       <!-- this is the sign-up form -->
       <div class="grid bg-bright pad-footer">
         <div class="col-4_sm-12">
-          <h4>Sign up for updates <i class="fa fa-arrow-right text-dark" aria-hidden="true"></i></h4>
+          <h4>Sign up for updates <i class="fa fa-arrow-right text-dark hide-screen-md" aria-hidden="true"></i></h4>
         </div class="col-8_sm-12">
         <!-- embed sign-up form below -->
         <div>
         </div>
       </div>
     </footer>
+    <!-- this is wher my javascript nonsense lives -->
+    <nav id="mobile-menu" class="grid-middle">
+      <a href="#" class="col-12 toggle-mobile-menu">
+        <i class="fa fa-times text-white" aria-hidden="true"></i>
+      </a>
+      <a href="services.html" class="text-white">services</a>
+      <a href="blog.html" class="text-white">blog</a>
+      <a href="/#contact" class="text-white">contact</a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
   </body>
