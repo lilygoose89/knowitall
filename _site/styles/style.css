@@ -10,19 +10,23 @@ body {
   background-color: #fefefe;
 }
 /* layouts ----------------------------------------- */
-nav {
-  padding: 2vh 5vw;
+header {
   position: fixed;
   z-index: 999;
   top: 0;
   width: 100%;
 }
-section {
-  padding: 14vh 10vw;
+.pad-section {
+  padding: 10vh 14vw;
 }
-/*.relativeBox{
-  position:relative;
-}*/
+.pad-footer {
+  padding: 2.5vh 12vw;
+}
+@media all and (max-width:768px) {
+  .pad-section {
+    padding: 8vh 6vw;
+  }
+}
 /* typography ----------------------------------------- */
 body {
   font-family: 'Roboto Slab', serif;
@@ -110,6 +114,62 @@ blockquote {
 .text-small {
   font-size: 0.9rem;
 }
+/* hero section -----------------------------------------  */
+.boxontop-ltr-wrapper {
+  padding: 200px 0;
+}
+.boxontop-ltr-content {
+  left: -10vw;
+  position: relative;
+  z-index: 99;
+}
+.boxontop-ltr-img-wrapper {
+  left: -10%;
+  z-index: 0;
+  height: 130%;
+  top: -15%;
+}
+.boxontop-ltr-img {
+  position: relative;
+  left: -10vw;
+}
+.boxontop-ltr-buttons {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 91%;
+  text-align: center;
+}
+@media all and (max-width:768px) {
+  .boxontop-ltr-wrapper {
+    padding: 0;
+  }
+  .boxontop-ltr-content {
+    left: 0;
+    z-index: 99;
+  }
+  .boxontop-ltr-img-wrapper {
+    left: 0;
+    z-index: 0;
+    height: 0;
+    top: 0;
+  }
+  .boxontop-ltr-img {
+    left: 0;
+  }
+  .boxontop-ltr-buttons {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 94%;
+    text-align: center;
+  }
+}
+@media all and (max-width:568px) {
+  .pad-hero {
+    padding: 8vh 6vw;
+  }
+}
 /* forms -----------------------------------------  */
 label {
   font-family: 'Roboto Slab', serif;
@@ -174,7 +234,6 @@ button {
   padding: 2%;
   box-shadow: 0.5px 5px 20px rgba(0,0,0,0.13);
 }
-
 /* ALIGNMENT */
 .text-center {
   text-align: center;
@@ -188,11 +247,7 @@ button {
 .container-center {
   margin: 0 auto;
 }
-
 /* PADDING/MARGINS */
-.pad-footer {
-  padding: 2vh 12vw;
-}
 .pad-all-s {
   padding: 5%;
 }
@@ -238,23 +293,72 @@ button {
 .pad-left-l {
   padding-left: 20%;
 }
+.margin-all-xs {
+  margin: 1%
+}
 .margin-all-s {
   margin: 5%
 }
-.margin-all-s {
+.margin-all-m {
   margin: 10%
 }
-.margin-all-s {
-  margin-top: 20%
+.margin-all-l {
+  margin: 20%
+}
+.margin-top-xs {
+  margin-top: 1%
 }
 .margin-top-s {
   margin-top: 5%
 }
-.margin-top-s {
+.margin-top-m {
   margin-top: 10%
 }
-.margin-top-s {
+.margin-top-l {
   margin-top: 20%
+}
+.margin-right-xs {
+  margin-right: 1%
+}
+.margin-right-s {
+  margin-right: 5%
+}
+.margin-right-m {
+  margin-right: 10%
+}
+.margin-right-l {
+  margin-right: 20%
+}
+.margin-bottom-xs {
+  margin-bottom: 1%
+}
+.margin-bottom-s {
+  margin-bottom: 5%
+}
+.margin-bottom-m {
+  margin-bottom: 10%
+}
+.margin-bottom-l {
+  margin-bottom: 20%
+}
+.margin-left-xs {
+  margin-left: 1%
+}
+.margin-left-s {
+  margin-left: 5%
+}
+.margin-left-m {
+  margin-left: 10%
+}
+.margin-left-l {
+  margin-left: 20%
+}
+/* POSITION */
+.position-rel {
+  position: relative;
+}
+.position-abs {
+  position: absolute;
 }
 /* ANIMATIONS */
 /*.nudge-right {
@@ -273,52 +377,10 @@ button {
      -o-transition: all 367ms cubic-bezier(0.215, 1.205, 0.320, 0.965);
         transition: all 367ms cubic-bezier(0.215, 1.205, 0.320, 0.965); /* custom */
 }
-/* container and button floats */
-.container-float-heroCTA {
-  position: absolute;
-  right: 40%;
-  left: 15%;
-  top: 30%;
-}
-.button-float-learnforfree {
-  position: absolute;
-  top: 92%;
-  right: 55%;
-}
-.button-float-hireme {
-  position: absolute;
-  top: 92%;
-  right: 25%;
-  margin-left: 2%;
-}
-.container-float-testimonial {
-  position: absolute;
-  right: 10%;
-  left: 40%;
-  top: 416%;
-}
-.container-float-lpform {
-  position: absolute;
-  right: 10%;
-  left: 40%;
-  top: 32%;
-}
-/* media queries */
+/* MEDIA QUERIES */
 @media all and (max-width:768px) {
-  section {
-    padding: 8vh 6vw;
-  }
-  .container-float-heroCTA, .container-float-testimonial, .container-float-lpform {
-    position: static;
-    padding-top: 10%;
-    padding-bottom: 5%;
-    margin-bottom: 5%;
-  }
   .center-screen-md {
     text-align: center;
-  }
-  .button-float-learnforfree, .button-float-hireme, {
-    position: static;
   }
   .hide-screen-md {
     display: none;
@@ -334,10 +396,8 @@ button {
   .hide-screen-sm {
     display: none;
   }
-}
-/*
-**  MOBILE MENU
-*/
+
+/*  MOBILE MENU */
 #mobile-menu {
   background-color: #ff794d;
   text-align: center;
@@ -363,12 +423,10 @@ button {
   display: none !important;
 }
 @media all and (max-width:768px) {
-
   #hamburger {
     display: block !important;
   }
   #menu {
     display: none;
   }
-
 }

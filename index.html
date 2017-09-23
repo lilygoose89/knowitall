@@ -4,38 +4,40 @@ title: knowitall solutions for startups
 ---
 
     <!-- this is my introduction section with calls to action -->
-    <section class="hero pad-top-m">
+    <section class="pad-hero">
       <!-- the conatiner below contains my hero elements and will be used again but flipped in the testimonials section -->
-      <div class="grid-middle">
+      <div class="boxontop-ltr-wrapper grid-middle-noBottom-noGutter-equalHeight">
         <!-- this is the contianer for the white box and buttons -->
-        <div class="col-6_sm-12">
+        <div class="boxontop-ltr-content position-rel col-6_sm-12" data-push-left="off-3_sm-0">
           <!-- this is the container for my white box -->
-          <div class="container-float-heroCTA bg-white">
+          <div class="bg-white">
             <h1>Helping startup teams scale to success.</h1>
             <h6>Happy teams have the know-how and resources to stay on the same page and work in sync.</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <!-- these are the buttons which are meant to midline at the bottom of the container above -->
-            <div class="center-screen-md">
-              <a href="blog.html"><button class="button-main transition-ease button-float-learnforfree">learn for free</button></a>
-              <a href="services.html"><button class="button-main transition-ease button-float-hireme">hire me</button></a>
+            <div class="boxontop-ltr-buttons">
+              <a href="blog.html"><button class="button-main transition-ease margin-right-xs">learn for free</button></a>
+              <a href="services.html"><button class="button-main transition-ease margin-left-xs">hire me</button></a>
             </div>
           </div>
         </div>
         <!-- this is the container for my hero image which will overlap so it sits beside and underneath the container for my intro -->
-        <div class="col-6_sm-12 center-screen-md">
-          <img src="https://unsplash.it/500" alt="lily bruns hero image">
+        <div class="boxontop-ltr-img position-rel col-3_sm-12">
+          <div class="boxontop-ltr-img-wrapper position-abs">
+            <img class="boxontop-ltr-img" src="https://unsplash.it/500" alt="lily bruns hero image">
+          </div>
         </div>
       </div>
     </section>
     <!-- this is my definition of knowledge management section -->
-    <section class="whatiskm">
+    <section class="pad-section">
       <h2 class="text-center">What is knowledge management?</h2>
       <div class="bg-dark pad-all-s">
         <p class="text-white text-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </section>
     <!-- this is my recent articles section which will have previews and links to the blog -->
-    <section class="articles">
+    <section class="pad-section">
       <h3>recent articles</h3>
       <!-- this is the container for the blog previews -->
       <div class="grid">
@@ -47,13 +49,13 @@ title: knowitall solutions for startups
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
           <div class="text-center">
-            <a href="#"><button class="button-main transition-ease ">read more</button></a>
+            <a href="#"><button class="button-main transition-ease">read more</button></a>
           </div>
         </div>
       </div>
     </section>
     <!-- this is my services section which explains what i do -->
-    <section class="services">
+    <section class="pad-section">
       <h3>services</h3>
       <!-- this is the container for the list of services -->
       <div class="bg-white">
@@ -65,13 +67,13 @@ title: knowitall solutions for startups
       </div>
     </section>
     <!-- this is my recent projects section which will have previews of case studies and links to the landing pages where they can be downloaded -->
-    <section class="projects">
+    <section class="pad-section">
       <h3>recent projects</h3>
       <!-- this is the container for the case study previews -->
-      <div class="grid">
+      <div class="grid-spaceBetween">
         <!-- this is a case study preview which will be looped by jekyll -->
-       {% for casestudy in site.casestudy %}
-        <div class="col-4_sm-12 bg-white casestudy-preview">
+       {% for casestudy in site.casestudy limit:3 %}
+        <div class="col_sm-12 bg-white casestudy-preview margin-all-xs">
           <img src="{{casestudy.pic}}" alt="case study image">
           <div>
             <h4>{{casestudy.title}}</h4>
@@ -86,7 +88,7 @@ title: knowitall solutions for startups
       </div>
     </section>
     <!-- this is my testimonials section which tells people why the should work with me -->
-    <section class="testimonials">
+    <section class="pad-section">
       <!-- this is the container for my testimonials and image -->
       <div class="grid-middle">
         <div class="col-7_sm-12 container-float-testimonial bg-white">
@@ -118,7 +120,7 @@ title: knowitall solutions for startups
       </div>
     </section>
     <!-- this is my contact section with a form so people can get in touch with me or clients can kick-start their projects -->
-    <section id="contact">
+    <section id="contact" class="pad-section">
       <!-- this is the container for the contact form -->
       <div class="bg-white">
         <h2 class="text-center">Get in touch</h2>
