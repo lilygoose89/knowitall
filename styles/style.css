@@ -218,17 +218,19 @@ label {
   display: block;
   padding: 0.5rem 0.2rem 0.5rem;
 }
-input,placeholder {
+input,textarea,placeholder {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
 }
 input {
   width: 100%;
   height: 2rem;
+
 }
 textarea {
   width: 100%;
   height: 5rem;
+  border: 0.25px inset rgb(121,121,121,0.5);
 }
 /* testimonials slider ----------------------------------------- */
 #testimonial {
@@ -248,7 +250,7 @@ textarea {
   text-align: center;
   z-index: 2;*/
 }
-#testimonial .slides li blockquote{
+#testimonial .slides li blockquote {
   /*top: 0;
   left: 0;
   width: 100%;
@@ -281,6 +283,23 @@ button {
 }
 .button-dark:hover {
   transform: scale(1.1);
+}
+/* toggle button form hider ----------------------------------------- */
+.button-toggle-active {
+  background-color: white;
+  border: 5px solid #ff794d;
+  padding: 10px 5px;
+}
+.button-toggle-inactive {
+  background-color: lightgrey;
+  border: solid grey 5px;
+  padding: 10px 5px;
+}
+.toggle-hide-message {
+  display: none;
+}
+.toggle-hide-kickstart {
+  display: none;
 }
 /* helper classes -----------------------------------------  */
 /* BACKGROUNDS */

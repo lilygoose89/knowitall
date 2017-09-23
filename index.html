@@ -154,71 +154,78 @@ title: knowitall solutions for startups
         <h2 class="text-center">Get in touch</h2>
           <!-- this is button to toggle between the two form options (will use javascript?) -->
           <div class="text-center">
-            <a href="#"><button class="button-main button-toggle">send a quick message</button></a>
-            <a href="#"><button class="button-main button-toggle">kickstart your project</button></a>
+            <button id="sendaquickmessage" class="button-toggle-active">send a quick message</button>
+            <button id="kickstart" class="button-toggle">kickstart your project</button>
           </div>
-          <!-- this is the first form which will appear by default -->
-          <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
-            <div class="col-12">
-              <label for="name">Name</label>
-              <input type="text" required="true" name="name" id="name" placeholder=" Harry">
-            </div>
-            <div class="col-12">
-              <label for="email">Email</label>
-              <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
-            </div>
-            <div class="col-12">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" placeholder=" Your message"></textarea>
-            </div>
-            <button type="submit" required="true" class="button-main transition-ease">send</button>
-          </form>
-          <!-- this is the second form which will appear when the user toggles the button -->
-          <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
-            <div class="col-6_sm-12">
-              <label for="name">First Name</label>
-              <input type="text" required="true" name="firstname" id="name" placeholder=" Harry">
-            </div>
-            <div class="col-6_sm-12">
-              <label for="name">Last Name</label>
-              <input type="text" required="true" name="lastname" id="name" placeholder=" Potter">
-            </div>
-            <div class="col-12">
-              <label for="email">Email</label>
-              <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
-            </div>
-            <div class="col-12">
-              <label for="name">Company</label>
-              <input type="text" required="true" name="company" id="name" placeholder=" Ministry of Magic">
-            </div>
-            <div class="col-12 grid">
-              <label for="project">What project(s) are you interested in?</label>
-              <!-- these are the checkbox options - CAN PULL USING JEKYLL? -->
-              {% for services in site.services %}
-              <input type="checkbox" name="project" value="project1"/>{{services.servicename}}
-              {% endfor %}
-              <input type="checkbox" name="project" value="multi"/>Several of the above projects, I *need* help
-              <input type="checkbox" name="project" value="notsure"/>Not sure, can we chat first?
-            </div>
-            <div class="col-12">
-              <label for="companysize">How many people are on your team?</label>
-              <select name="teamsize">
-                <option value="tiny">Less than 5 people</option>
-                <option value="small">5-10 people</option>
-                <option value="medium">11-20 people</option>
-                <option value="large">21-50 people</option>
-                <option value="toobig">More than 50 people</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label for="whykm">Why do you need knowledge management?</label>
-              <textarea name="message" required="true" id="whykm" placeholder=" Because I'm the only one who can answer my team's questions and its driving me bananas."></textarea>
-            </div>
-            <div class="col-12">
-              <label for="message">What else would you like to tell me?</label>
-              <textarea name="message" id="message" placeholder=" Your message"></textarea>
-            </div>
-            <button type="submit" class="button-main button-big transition-ease">send project request</button>
-          </form>
+          <div class="flexslider">
+            <ul class="slides">
+              <li><!-- this is the first form which will appear by default -->
+                <form id="sendquickmessage-form" class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
+                  <div class="col-12">
+                    <label for="name">Name</label>
+                    <input type="text" required="true" name="name" id="name" placeholder=" Harry">
+                  </div>
+                  <div class="col-12">
+                    <label for="email">Email</label>
+                    <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
+                  </div>
+                  <div class="col-12">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder=" Your message"></textarea>
+                  </div>
+                  <button type="submit" required="true" class="button-main transition-ease">send</button>
+                </form>
+              </li>
+              <!-- this is the second form which will appear when the user toggles the button -->
+              <li>
+                <form id="kickstart-form" class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
+                  <div class="col-6_sm-12">
+                    <label for="name">First Name</label>
+                    <input type="text" required="true" name="firstname" id="name" placeholder=" Harry">
+                  </div>
+                  <div class="col-6_sm-12">
+                    <label for="name">Last Name</label>
+                    <input type="text" required="true" name="lastname" id="name" placeholder=" Potter">
+                  </div>
+                  <div class="col-12">
+                    <label for="email">Email</label>
+                    <input type="email" required="true" name="email" id="email" placeholder=" harry@wizards.com">
+                  </div>
+                  <div class="col-12">
+                    <label for="name">Company</label>
+                    <input type="text" required="true" name="company" id="name" placeholder=" Ministry of Magic">
+                  </div>
+                  <div class="col-12 grid">
+                    <label for="project">What project(s) are you interested in?</label>
+                    <!-- these are the checkbox options - CAN PULL USING JEKYLL? -->
+                    {% for services in site.services %}
+                    <input type="checkbox" name="project" value="project1"/>{{services.servicename}}
+                    {% endfor %}
+                    <input type="checkbox" name="project" value="multi"/>Several of the above projects, I *need* help
+                    <input type="checkbox" name="project" value="notsure"/>Not sure, can we chat first?
+                  </div>
+                  <div class="col-12">
+                    <label for="companysize">How many people are on your team?</label>
+                    <select name="teamsize">
+                      <option value="tiny">Less than 5 people</option>
+                      <option value="small">5-10 people</option>
+                      <option value="medium">11-20 people</option>
+                      <option value="large">21-50 people</option>
+                      <option value="toobig">More than 50 people</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="whykm">Why do you need knowledge management?</label>
+                    <textarea name="message" required="true" id="whykm" placeholder=" Because I'm the only one who can answer my team's questions and its driving me bananas."></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label for="message">What else would you like to tell me?</label>
+                    <textarea name="message" id="message" placeholder=" Your message"></textarea>
+                  </div>
+                  <button type="submit" class="button-main button-big transition-ease">send project request</button>
+                </form>
+              </li>
+            </ul>
+          </div>
       </div>
     </section>
