@@ -301,14 +301,14 @@ button {
   position: absolute;
   right: 10%;
   left: 40%;
-  top: 35%;
+  top: 32%;
 }
 /* media queries */
 @media all and (max-width:768px) {
   section {
     padding: 8vh 6vw;
   }
-  .container-float-heroCTA, .container-float-testimonial {
+  .container-float-heroCTA, .container-float-testimonial, .container-float-lpform {
     position: static;
     padding-top: 10%;
     padding-bottom: 5%;
@@ -317,7 +317,7 @@ button {
   .center-screen-md {
     text-align: center;
   }
-  .button-float-learnforfree, .button-float-hireme {
+  .button-float-learnforfree, .button-float-hireme, {
     position: static;
   }
   .hide-screen-md {

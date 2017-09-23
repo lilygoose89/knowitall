@@ -69,17 +69,20 @@ title: knowitall solutions for startups
       <h3>recent projects</h3>
       <!-- this is the container for the case study previews -->
       <div class="grid">
-        <!-- this is a case study preview which will be recreated in jekyll -->
-        <div class="col-4_sm-12 bg-white">
-          <img src="" alt="case study image">
+        <!-- this is a case study preview which will be looped by jekyll -->
+       {% for casestudy in site.casestudy %}
+        <div class="col-4_sm-12 bg-white casestudy-preview">
+          <img src="{{casestudy.pic}}" alt="case study image">
           <div>
-            <h4>Title of case study with awesome client.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h4>{{casestudy.title}}</h4>
+            <p>{{casestudy.previewtext}}</p>
           </div>
           <div class="text-center">
-            <a href="landingpage.html"><button class="button-main transition-ease">get the case study</button></a>
+            <!-- HELP ME - how use jekyll pull correct url in loop? -->
+            <a href="{{casestudy.url}}"><button class="button-main transition-ease">get the case study</button></a>
           </div>
         </div>
+       {% endfor %}
       </div>
     </section>
     <!-- this is my testimonials section which tells people why the should work with me -->

@@ -1,0 +1,4 @@
+collections:
+  casestudy:
+    output: true
+    permalink: /:collection/:name
