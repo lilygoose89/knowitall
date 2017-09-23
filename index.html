@@ -98,23 +98,41 @@ title: knowitall solutions for startups
           <!-- this is the container for my white box -->
           <div class="bg-white">
             <div>
-              <h2 class="text-medium">Why work with me?</h2>
+              <h2>Why work with me?</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!-- this is the container for the testimonials which should cycle through like a gallery-->
             <div class="grid-middle container-center">
               <div class="col-1">
                 <!-- this is the button or icon to click left to see previous testimonial -->
-              <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+              <a id="flex-left" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
               </div>
-              <div class="col-8">
-                <!-- this is the testimonial itself -->
-                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <p class="text-right">- satisfied client #1</p></blockquote>
+              <div id="testimonial" class="col-8">
+                <!-- these are the testimonial itself -->
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li>
+                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                      <p class="text-right">satisfied client #1</p>
+                    </li>
+                    <li>
+                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                      <p class="text-right">satisfied client #1</p>
+                    </li>
+                    <li>
+                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                      <p class="text-right">satisfied client #1</p>
+                    </li>
+                    <li>
+                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
+                      <p class="text-right">satisfied client #1</p>
+                    </li>
+                  </ul><!-- .slides -->
+                </div><!-- .flexslider -->
               </div>
               <div class="col-1">
                 <!-- this is the button or icon to click right to see next testimonial -->
-                <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                <a id="flex-right" href="#"><i  class="fa fa-chevron-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
