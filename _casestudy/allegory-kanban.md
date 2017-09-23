@@ -1,5 +1,5 @@
 ---
-layout: default-lp
+layout: lp
 title: This is a landing page for an amazing client case study.
 tagline: This is a tagline.
 bulletpoints:

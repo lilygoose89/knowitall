@@ -15,7 +15,7 @@ title: knowitall solutions for startups
             <h6>Happy teams have the know-how and resources to stay on the same page and work in sync.</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <!-- these are the buttons which are meant to midline at the bottom of the container above -->
-            <div class="boxontop-ltr-buttons">
+            <div class="boxontop-ltr-buttons position-abs">
               <a href="blog.html"><button class="button-main transition-ease margin-right-xs">learn for free</button></a>
               <a href="services.html"><button class="button-main transition-ease margin-left-xs">hire me</button></a>
             </div>
@@ -24,7 +24,7 @@ title: knowitall solutions for startups
         <!-- this is the container for my hero image which will overlap so it sits beside and underneath the container for my intro -->
         <div class="boxontop-ltr-img position-rel col-3_sm-12">
           <div class="boxontop-ltr-img-wrapper position-abs">
-            <img class="boxontop-ltr-img" src="https://unsplash.it/500" alt="lily bruns hero image">
+            <img class="boxontop-ltr-img add-object-fit" src="https://unsplash.it/500" alt="lily bruns hero image">
           </div>
         </div>
       </div>
@@ -60,11 +60,13 @@ title: knowitall solutions for startups
       <!-- this is the container for the list of services -->
       <div class="bg-white">
         <!-- this is one item on the list of services which will be repeated with jekyll - ACCORDIAN? -->
-        <div>
-          <h4>Service 1</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+        {% for services in site.services %}
+         <div>
+           <h4>{{services.servicename}}</h4>
+         </div>
+        {% endfor %}
       </div>
+      <a href=""><button class="button-main">read more about services</button></a>
     </section>
     <!-- this is my recent projects section which will have previews of case studies and links to the landing pages where they can be downloaded -->
     <section class="pad-section">
@@ -73,7 +75,7 @@ title: knowitall solutions for startups
       <div class="grid-spaceBetween">
         <!-- this is a case study preview which will be looped by jekyll -->
        {% for casestudy in site.casestudy limit:3 %}
-        <div class="col_sm-12 bg-white casestudy-preview margin-all-xs">
+        <div class="col_sm-12 bg-white margin-all-xs">
           <img src="{{casestudy.pic}}" alt="case study image">
           <div>
             <h4>{{casestudy.title}}</h4>
@@ -88,36 +90,44 @@ title: knowitall solutions for startups
       </div>
     </section>
     <!-- this is my testimonials section which tells people why the should work with me -->
-    <section class="pad-section">
-      <!-- this is the container for my testimonials and image -->
-      <div class="grid-middle">
-        <div class="col-7_sm-12 container-float-testimonial bg-white">
-          <div>
-            <h2 class="text-medium">Why work with me?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <!-- this is the container for the testimonials which should cycle through like a gallery-->
-          <div class="grid-middle container-center">
-            <div class="col-1">
-              <!-- this is the button or icon to click left to see previous testimonial -->
-            <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+    <section>
+      <!-- the container below contains my testimonial elements -->
+      <div class="boxontop-rtl-wrapper grid-middle-noBottom-noGutter-equalHeight">
+        <!-- this is the contianer for the white box and buttons -->
+        <div class="boxontop-rtl-content position-rel col-6_sm-12" data-push-left="off-3_sm-0">
+          <!-- this is the container for my white box -->
+          <div class="bg-white">
+            <div>
+              <h2 class="text-medium">Why work with me?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <div class="col-8">
-              <!-- this is the testimonial itself -->
-              <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              <p class="text-right">- satisfied client #1</p></blockquote>
-            </div>
-            <div class="col-1">
-              <!-- this is the button or icon to click right to see next testimonial -->
-              <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <!-- this is the container for the testimonials which should cycle through like a gallery-->
+            <div class="grid-middle container-center">
+              <div class="col-1">
+                <!-- this is the button or icon to click left to see previous testimonial -->
+              <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+              </div>
+              <div class="col-8">
+                <!-- this is the testimonial itself -->
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <p class="text-right">- satisfied client #1</p></blockquote>
+              </div>
+              <div class="col-1">
+                <!-- this is the button or icon to click right to see next testimonial -->
+                <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- this will overlap so it sits beside and underneath the container for testimonials -->
-        <div class="col-7_sm-12">
-          <img src="https://unsplash.it/500" alt="image to go with testimonial">
+        <!-- this is the container for my testimonial image -->
+        <div class="boxontop-rtl-img position-rel col-3_sm-12">
+          <div class="boxontop-rtl-img-wrapper position-abs">
+            <img class="boxontop-rtl-img add-object-fit" src="https://unsplash.it/500" alt="image to go with testimonial">
+          </div>
         </div>
       </div>
+
+
     </section>
     <!-- this is my contact section with a form so people can get in touch with me or clients can kick-start their projects -->
     <section id="contact" class="pad-section">
@@ -166,9 +176,9 @@ title: knowitall solutions for startups
             <div class="col-12 grid">
               <label for="project">What project(s) are you interested in?</label>
               <!-- these are the checkbox options - CAN PULL USING JEKYLL? -->
-              <input type="checkbox" name="project" value="project1"/>Project 1
-              <input type="checkbox" name="project" value="project2"/>Project 2
-              <input type="checkbox" name="project" value="project3"/>Project 3
+              {% for services in site.services %}
+              <input type="checkbox" name="project" value="project1"/>{{services.servicename}}
+              {% endfor %}
               <input type="checkbox" name="project" value="multi"/>Several of the above projects, I *need* help
               <input type="checkbox" name="project" value="notsure"/>Not sure, can we chat first?
             </div>

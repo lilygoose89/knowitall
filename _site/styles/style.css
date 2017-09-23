@@ -24,7 +24,7 @@ header {
 }
 @media all and (max-width:768px) {
   .pad-section {
-    padding: 8vh 6vw;
+    padding: 6vh 6vw;
   }
 }
 /* typography ----------------------------------------- */
@@ -126,21 +126,22 @@ blockquote {
 .boxontop-ltr-img-wrapper {
   left: -10%;
   z-index: 0;
-  height: 130%;
+  height: 130% !important;
   top: -15%;
 }
 .boxontop-ltr-img {
-  position: relative;
   left: -10vw;
 }
 .boxontop-ltr-buttons {
-  position: absolute;
   width: 100%;
   left: 0;
   top: 91%;
   text-align: center;
 }
 @media all and (max-width:768px) {
+  .pad-hero {
+    padding: 12vh 6vw;
+  }
   .boxontop-ltr-wrapper {
     padding: 0;
   }
@@ -156,19 +157,60 @@ blockquote {
   }
   .boxontop-ltr-img {
     left: 0;
+    width: 100%;
   }
   .boxontop-ltr-buttons {
-    position: absolute;
     width: 100%;
     left: 0;
-    top: 94%;
+    top: 0;
     text-align: center;
   }
 }
-@media all and (max-width:568px) {
+/* testimonial section -----------------------------------------  */
+.boxontop-rtl-wrapper {
+  padding: 200px 0;
+}
+.boxontop-rtl-content {
+  left: 10vw;
+  position: relative;
+  z-index: 99;
+}
+.boxontop-rtl-img-wrapper {
+  left: -116%;
+  z-index: 0;
+  height: 130% !important;
+  top: -15%;
+}
+.boxontop-rtl-img {
+  left: -31vw;
+}
+@media all and (max-width:768px) {
   .pad-hero {
-    padding: 8vh 6vw;
+    padding: 12vh 6vw;
   }
+  .boxontop-rtl-wrapper {
+    padding: 0;
+  }
+  .boxontop-rtl-content {
+    left: 0;
+    z-index: 99;
+  }
+  .boxontop-rtl-img-wrapper {
+    left: 0;
+    z-index: 0;
+    height: 0;
+    top: 0;
+  }
+  .boxontop-rtl-img {
+    left: 0;
+    width: 100%;
+  }
+}
+/* landing page */
+.lp-infoandform {
+  width: 120%;
+  position: relative;;
+  left: -10vw;
 }
 /* forms -----------------------------------------  */
 label {
@@ -353,6 +395,11 @@ button {
 .margin-left-l {
   margin-left: 20%
 }
+.add-object-fit {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 /* POSITION */
 .position-rel {
   position: relative;
@@ -391,12 +438,18 @@ button {
   .text-medium {
     font-size: 0.9rem;
   }
+  .position-abs {
+    position: static;
+  }
+  .position-rel {
+    position: static;
+  }
 }
 @media all and (max-width:568px) {
   .hide-screen-sm {
     display: none;
   }
-
+}
 /*  MOBILE MENU */
 #mobile-menu {
   background-color: #ff794d;

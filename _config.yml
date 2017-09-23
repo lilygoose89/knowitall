@@ -1,4 +1,5 @@
 collections:
+  services:
   casestudy:
     output: true
     permalink: /:collection/:name
