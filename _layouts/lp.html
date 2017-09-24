@@ -21,10 +21,17 @@
         </div>
       </nav>
     </header>
-    <section class="grid pad-section pad-top-m">
-      <h1 class="pad-bottom-s text-center">{{page.title}}</h1>
+    <section class="pad-top-m text-center">
+      <h1>{{page.title}}</h1>
+      <div class="container-center">
+    </section>
+
+    <!-- <section class="grid pad-top-m">
+      <div class="container-center pad-bottom-s">
+        <h1>{{page.title}}</h1>
+      </div>
       <div class="col-6_sm-12">
-        <div class="bg-white">
+        <div class="bg-white container-center">
           <p>{{page.tagline}}</p>
           <ul>
             {% for point in page.bulletpoints %}
@@ -37,31 +44,34 @@
       </div>
       <div class="col-6_sm-12">
         <div class="position-abs">
-          <div class="bg-bright">
+          <div class="bg-bright pad-all-s lp-infoandform">
             <h5 class="text-center">download the case study</h5>
-            <form class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
-               <div class="col-6_sm-12 grid">
-                 <label for="name">First Name</label>
-                 <input type="text" name="firstname" id="name" placeholder=" Harry">
-               </div>
-               <div class="col-6_sm-12 grid">
-                 <label for="name">Last Name</label>
-                 <input type="text" name="lastname" id="name" placeholder=" Potter">
-               </div>
-               <div class="col-12 grid">
-                 <label for="email">Email</label>
-                 <input type="email" name="email" id="email" placeholder=" harry@wizards.com">
-               </div>
-               <div>
-                 <button type="submit" class="button-dark transition-ease margin-top-s">get the pdf</button>
-               </div>
+            <form class="grid-spaceBetween margin-all-s" method="POST" action="http://formspree.io/busababruns@gmail.com">
+              <div class="col-5_sm-12 grid">
+                <label for="name">First Name</label>
+                <input type="text" name="firstname" id="name" placeholder=" Harry">
+              </div>
+              <div class="col-5_sm-12 grid">
+                <label for="name">Last Name</label>
+                <input type="text" name="lastname" id="name" placeholder=" Potter">
+              </div>
+              <div class="col-12 grid">
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email" placeholder=" harry@wizards.com">
+              </div>
+              <button type="submit" class="button-dark container-center margin-top-s transition-ease">get the pdf</button>
             </form>
           </div>
         </div>
       </div>
+      </section> -->
+
+
+
+      <section class="pad-section">
       <!-- this is where extra content goes -->
       {{content}}
-    </section>
+      </section>
     <!-- this is my footer section which will be reused in jekyll -->
     <footer>
       <div class="bg-grey grid-top pad-footer">

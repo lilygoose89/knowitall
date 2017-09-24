@@ -144,23 +144,19 @@ title: knowitall solutions for startups
           </div>
         </div>
       </div>
-
-
     </section>
-    <!-- this is my contact section with a form so people can get in touch with me or clients can kick-start their projects -->
     <section id="contact" class="pad-section">
       <!-- this is the container for the contact form -->
       <div class="bg-white">
         <h2 class="text-center">Get in touch</h2>
           <!-- this is button to toggle between the two form options (will use javascript?) -->
           <div class="text-center">
-            <button id="sendaquickmessage" class="button-toggle-active">send a quick message</button>
-            <button id="kickstart" class="button-toggle">kickstart your project</button>
+            <button id="sendquickmessage" class="button-toggle-active">send a quick message</button>
+            <button id="kickstart" class="button-toggle-inactive">kickstart your project</button>
           </div>
-          <div class="flexslider">
-            <ul class="slides">
-              <li><!-- this is the first form which will appear by default -->
-                <form id="sendquickmessage-form" class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
+          <div>
+            <!-- this is the first form which will appear by default -->
+                <form id="sendquickmessage-form" class="" method="POST" action="http://formspree.io/busababruns@gmail.com">
                   <div class="col-12">
                     <label for="name">Name</label>
                     <input type="text" required="true" name="name" id="name" placeholder=" Harry">
@@ -175,15 +171,13 @@ title: knowitall solutions for startups
                   </div>
                   <button type="submit" required="true" class="button-main transition-ease">send</button>
                 </form>
-              </li>
-              <!-- this is the second form which will appear when the user toggles the button -->
-              <li>
-                <form id="kickstart-form" class="grid-spaceAround" method="POST" action="http://formspree.io/busababruns@gmail.com">
-                  <div class="col-6_sm-12">
+            <!-- this is the second form which will appear when the user toggles the button -->
+                <form id="kickstart-form" class="hide-kickstart grid" method="POST" action="http://formspree.io/busababruns@gmail.com">
+                  <div class="col_sm-12">
                     <label for="name">First Name</label>
                     <input type="text" required="true" name="firstname" id="name" placeholder=" Harry">
                   </div>
-                  <div class="col-6_sm-12">
+                  <div class="col_sm-12">
                     <label for="name">Last Name</label>
                     <input type="text" required="true" name="lastname" id="name" placeholder=" Potter">
                   </div>
@@ -195,7 +189,7 @@ title: knowitall solutions for startups
                     <label for="name">Company</label>
                     <input type="text" required="true" name="company" id="name" placeholder=" Ministry of Magic">
                   </div>
-                  <div class="col-12 grid">
+                  <div class="col-12">
                     <label for="project">What project(s) are you interested in?</label>
                     <!-- these are the checkbox options - CAN PULL USING JEKYLL? -->
                     {% for services in site.services %}
@@ -224,8 +218,6 @@ title: knowitall solutions for startups
                   </div>
                   <button type="submit" class="button-main button-big transition-ease">send project request</button>
                 </form>
-              </li>
-            </ul>
           </div>
       </div>
     </section>
