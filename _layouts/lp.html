@@ -21,9 +21,43 @@
         </div>
       </nav>
     </header>
-    <section class="pad-top-m text-center">
-      <h1>{{page.title}}</h1>
-      <div class="container-center">
+    <section class="pad-top-m container-center">
+      <h1 class="text-center">{{page.title}}</h1>
+      <!-- this is the container for all the elements  -->
+      <div class="grid-noGutter-noBottom">
+        <!-- this is the container for the white box (populated by jekyll) -->
+        <div class="col-6 bg-white pad-box">
+          <p>{{page.tagline}}</p>
+          <ul>
+            {% for point in page.bulletpoints %}
+            <li>{{point.text}}</li>
+            {% endfor %}
+          </ul>
+          <p>{{page.extratext}}</p>
+          <p>{{page.closingpitch}}</p>
+        </div>
+        <!-- this is the wrapper for the lp form box  -->
+        <div class="col-6 position-rel">
+          <!-- this is the container for the lp form -->
+          <div class="bg-bright pad-all-m">
+            <form class="grid-spaceBetween margin-all-s" method="POST" action="http://formspree.io/busababruns@gmail.com">
+              <div class="col-5_sm-12 grid">
+                <label for="name">First Name</label>
+                <input type="text" name="firstname" id="name" placeholder=" Harry">
+              </div>
+              <div class="col-5_sm-12 grid">
+                <label for="name">Last Name</label>
+                <input type="text" name="lastname" id="name" placeholder=" Potter">
+              </div>
+              <div class="col-12 grid">
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email" placeholder="harry@wizards.com">
+              </div>
+              <button type="submit" class="button-dark container-center transition-ease margin-top-s">get the pdf</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- <section class="grid pad-top-m">

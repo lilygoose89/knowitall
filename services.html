@@ -9,10 +9,10 @@ title: knowitall services
       <div class="grid">
         <!-- this is a service preview which will be repeated with jekyll -->
         {% for services in site.services %}
-        <div class="col_sm-12 bg-white margin-all-xs">
+        <div class="col_sm-12 bg-white pad-box margin-all-xs">
           <div>
           <h4>{{services.servicename}}</h4>
-          <a href="#{{forloop.index}}"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+          <a href="#{{forloop.index}}"><i class="fa fa-angle-double-down transition-ease" aria-hidden="true"></i></a>
           </div>
         </div>
         {% endfor %}
@@ -23,7 +23,7 @@ title: knowitall services
       <div>
         <!-- this is a service description which will be repeated with jekyll -->
         {% for services in site.services %}
-        <div class="bg-white margin-bottom-s">
+        <div class="bg-white pad-box margin-bottom-s">
             <div class="grid-spaceBetween">
               <div>
                 <h4 id="{{forloop.index}}">{{services.servicename}}</h4>
