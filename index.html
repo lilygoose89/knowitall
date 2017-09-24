@@ -61,12 +61,14 @@ title: knowitall solutions for startups
       <div class="bg-white pad-box">
         <!-- this is one item on the list of services which will be repeated with jekyll - ACCORDIAN? -->
         {% for services in site.services %}
-         <div>
+         <div class="margin-all-s">
            <h4>{{services.servicename}}</h4>
          </div>
         {% endfor %}
+        <div class="text-right position-rel readservices-button center-screen-md">
+          <a href=""><button class="button-main">read more about services</button></a>
+        </div>
       </div>
-      <a href=""><button class="button-main">read more about services</button></a>
     </section>
     <!-- this is my recent projects section which will have previews of case studies and links to the landing pages where they can be downloaded -->
     <section class="pad-section">
